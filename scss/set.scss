@@ -1,0 +1,10 @@
+@import './reset';
+@import './variables';
+
+
+
+h1 {
+	color: $main-color__1;
+	font-family: $main-font__1;
+	font-size: 17px;
+}

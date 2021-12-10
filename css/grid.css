@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'Verdana';
+  src: url();
+}
+
+.grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (auto)[4];
+      grid-template-columns: repeat(4, auto);
+}
+
+.grid-cell {
+  width: 25vw;
+  height: 25vw;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.grid-cell img {
+  max-width: 80%;
+  max-height: 80%;
+  margin: 15px;
+}
+
+.grid-cell:hover {
+  background-color: rgba(249, 218, 146, 0.85);
+}
+/*# sourceMappingURL=grid.css.map */

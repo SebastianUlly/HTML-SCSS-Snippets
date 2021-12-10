@@ -1,0 +1,33 @@
+@import './variables';
+
+@function dividingTheViewport($direction, $divisor) {
+	@if $direction == 'W' {
+		@return 100vw / $divisor;
+	} @else {
+		@return 100vh / $divisor;
+	}
+}
+
+$numberOfElementsInGrid: 4;
+
+.grid {
+	display: grid;
+  	grid-template-columns: repeat(4, auto);
+	
+	&-cell {
+		width: dividingTheViewport('W', $numberOfElementsInGrid);
+		height: dividingTheViewport('W', $numberOfElementsInGrid);
+		text-align: center;
+		margin: 10px 0;
+
+		img {
+			max-width: 80%;
+			max-height: 80%;
+			margin: 15px;
+		}
+
+		&:hover {
+			background-color: $main-background-color__1;
+		}
+	}
+}
