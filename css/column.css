@@ -1,0 +1,25 @@
+body {
+  padding: 100px 0 0 0;
+}
+
+@font-face {
+  font-family: 'Verdana';
+  src: url();
+}
+
+.row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.column {
+  width: 33.33333%;
+}
+
+.group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+/*# sourceMappingURL=column.css.map */

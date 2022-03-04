@@ -1,0 +1,53 @@
+.parent {
+	padding: 100px 0 0 0;
+	width: 200px;
+	margin: 0 auto;
+}
+
+// ####################################################################################################
+// Begin des Code-Snippets
+
+@import './variables';
+
+input[type="file"] {
+    display: none;
+}
+
+.custom-file-upload {
+	position: relative;
+	box-sizing: border-box;
+	display: block;
+	color: white;
+	background-color: #212121;
+	border: 0.2*$standard-value solid white;
+	border-radius: 0.4*$standard-value;
+	width: 12*$standard-value;
+	height: 12*$standard-value;
+    cursor: pointer;
+
+	.line {
+		background-color: white;
+		position: absolute;
+		border: 0.1*$standard-value solid white;
+		border-radius: 100%;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+	}
+
+	.vertical-line {
+		width: 0px;
+		height: 20px;
+	}
+
+	.horizontal-line {
+		width: 20px;
+		height: 0px;
+	}
+}
+
+.thumbnail {
+	margin: 15px auto;
+	max-width: 12*$standard-value;
+	max-height: 12*$standard-value;
+}

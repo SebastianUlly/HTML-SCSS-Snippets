@@ -1,0 +1,60 @@
+.parent {
+  margin: 100px auto;
+  padding: 30px;
+  width: 400px;
+  background-color: white;
+  border: purple solid 4px;
+  border-radius: 10px;
+}
+
+@font-face {
+  font-family: 'Verdana';
+  src: url();
+}
+
+.accordion__item {
+  margin: 15px;
+  position: relative;
+  -webkit-transition: all .3s;
+  transition: all .3s;
+  overflow: hidden;
+  background-color: white;
+}
+
+.accordion__item summary::-webkit-details-marker,
+.accordion__item summary::marker {
+  content: '';
+}
+
+.accordion__item summary::after {
+  content: "+";
+  position: absolute;
+  color: green;
+  font-size: 23px;
+  font-weight: bold;
+  right: 10px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.accordion__item p {
+  margin: 15px 15px 0 15px;
+}
+
+.accordion__item[open] {
+  -webkit-transition: all .3s;
+  transition: all .3s;
+}
+
+.accordion__item[open] summary::after {
+  color: red;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+}
+
+.accordion__divider {
+  border: none;
+  height: 2px;
+  background-color: purple;
+}
+/*# sourceMappingURL=accordion.css.map */

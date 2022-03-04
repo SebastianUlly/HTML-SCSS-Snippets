@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,IAAI,CAAC;EACJ,OAAO,EAAE,WAAW;CACpB;;ACID,UAAU;EACT,WAAW,EAAE,SAAS;EACtB,GAAG,EAAE,KAAK;;;ADGX,AAAA,IAAI,CAAC;EACJ,OAAO,EAAE,IAAI;CACb;;AAED,AAAA,OAAO,CAAC;EACP,KAAK,EAAE,SAAyB;CAChC;;AAED,AAAA,MAAM,CAAC;EACN,OAAO,EAAE,IAAI;CACb",
+    "sources": [
+        "../scss/column.scss",
+        "../scss/_variables.scss"
+    ],
+    "names": [],
+    "file": "column.css"
+}

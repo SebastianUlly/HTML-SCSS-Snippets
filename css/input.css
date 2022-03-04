@@ -1,0 +1,129 @@
+.parent {
+  padding: 100px 0 0 0;
+  width: 200px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: 'Verdana';
+  src: url();
+}
+
+.input {
+  max-width: 100%;
+  margin: 15px auto;
+  position: relative;
+  padding: 0 15px;
+}
+
+.input__label {
+  position: absolute;
+  max-width: 76%;
+  left: 20px;
+  top: 13px;
+  padding: 0 6px;
+  color: white;
+  opacity: 0.4;
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: -webkit-transform 120ms ease-in;
+  transition: -webkit-transform 120ms ease-in;
+  transition: transform 120ms ease-in;
+  transition: transform 120ms ease-in, -webkit-transform 120ms ease-in;
+  background-color: #212121;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  z-index: -1;
+}
+
+.input__error {
+  position: absolute;
+  right: 5px;
+  bottom: -9px;
+  color: white;
+  padding: 0 11px;
+  white-space: nowrap;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: -webkit-transform 120ms ease-in;
+  transition: -webkit-transform 120ms ease-in;
+  transition: transform 120ms ease-in;
+  transition: transform 120ms ease-in, -webkit-transform 120ms ease-in;
+  background-color: #212121;
+  color: red;
+}
+
+.input__error-icon {
+  position: absolute;
+  right: 14px;
+  bottom: -15px;
+  padding: 0 3px;
+  white-space: nowrap;
+  -webkit-transform: scale(0.8);
+          transform: scale(0.8);
+  -webkit-transform-origin: 0 0;
+          transform-origin: 0 0;
+  -webkit-transition: -webkit-transform 120ms ease-in;
+  transition: -webkit-transform 120ms ease-in;
+  transition: transform 120ms ease-in;
+  transition: transform 120ms ease-in, -webkit-transform 120ms ease-in;
+  background-color: #212121;
+}
+
+.input__error-icon img {
+  -webkit-filter: invert(26%) sepia(99%) saturate(7474%) hue-rotate(358deg) brightness(115%) contrast(113%);
+          filter: invert(26%) sepia(99%) saturate(7474%) hue-rotate(358deg) brightness(115%) contrast(113%);
+}
+
+.input__error-icon:hover + .input__error__message {
+  display: block;
+}
+
+.input .input__error__message {
+  display: none;
+  position: absolute;
+  top: 8px;
+  left: 25px;
+  background-color: darkgrey;
+  color: white;
+  padding: 5px;
+  z-index: 1;
+  font-size: 13px;
+}
+
+.input__field {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border-radius: 4px;
+  background-color: #212121;
+  border: 2px solid white;
+  color: white;
+  padding: 10px;
+  font-size: 17px;
+  background-color: transparent;
+}
+
+.input__field:focus {
+  outline: none;
+}
+
+.input__field:focus + .input__label, .input__field:not(:placeholder-shown) + .input__label {
+  -webkit-transform: translate(0, -20px) scale(0.8);
+          transform: translate(0, -20px) scale(0.8);
+  opacity: 1;
+  z-index: 0;
+}
+
+.input__field.textarea__1 {
+  height: 101.66px;
+}
+
+.input__field.textarea__2 {
+  height: 159.99px;
+  resize: none;
+}
+/*# sourceMappingURL=input.css.map */

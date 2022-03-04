@@ -1,0 +1,100 @@
+[
+    {
+        "label": "Titelbild",
+        "elementId": "56f5bbc4-8638-4231-a790-8aab57f81304",
+        "parameters": {
+            "imageSpecs": {
+                "width": 500,
+                "height": 350,
+                "maximumSize": 600000,
+                "allowedTypes": [
+                    "image/jpeg",
+                    "image/jpg",
+                    "image/pjpeg",
+                    "image/png",
+                    "image/webp"
+                ]
+            },
+            "numberOfImages": 5
+        },
+        "componentId": "MultiImage",
+        "validations": {}
+    },
+    {
+        "label": "Preis",
+        "elementId": "29fa4b38-9436-4fa1-93e7-18c46f601aac",
+        "componentId": "SingleLineText",
+        "validations": {}
+    },
+	{
+		"label": "Preis",
+		"elementId": "8339fda6-53b2-45e4-a2ac-6d7eb7fdf581",
+		"parentId": "29fa4b38-9436-4fa1-93e7-18c46f601aac",
+		"position": 0,
+		"componentId": "inputField"
+	},
+    {
+        "label": "Menge",
+        "elementId": "0742d52f-8790-4287-9948-f10c13da8080",
+        "componentId": "SingleLineText",
+        "validations": {}
+    },
+	{
+		"label": "Menge",
+		"elementId": "eabf19dc-03e3-40c6-a2d3-cca87cbe4b31",
+		"parentId": "0742d52f-8790-4287-9948-f10c13da8080c",
+		"position": 0,
+		"componentId": "inputField"
+	},
+	{
+		"label": "Einheit",
+		"elementId": "5eebb88f-4aff-46ae-815d-cad5b06b6557",
+		"parentId": "0742d52f-8790-4287-9948-f10c13da8080c",
+		"position": 0,
+		"componentId": "inputField"
+	},
+    {
+        "label": "Beschreibung",
+        "elementId": "3d69093a-d2e1-4826-ab0b-b82db6200d5f",
+        "componentId": "Drawer",
+        "validations": {}
+    },
+    {
+        "label": "Anwendungstipps",
+        "elementId": "1a2a19b9-d2c7-44ca-a685-c29f860ad2d3",
+        "componentId": "Drawer",
+        "validations": {}
+    },
+    {
+        "label": "Inhaltsstoffe",
+        "elementId": "04a4dbea-13d5-438d-bd6b-a3106beaf6c4",
+        "componentId": "Drawer",
+        "validations": {}
+    },
+    {
+        "label": "Hinweise",
+        "elementId": "8b939bd6-706c-4b65-afdb-5ef2f3901eb6",
+        "componentId": "Drawer",
+        "validations": {}
+    },
+    {
+        "label": "Beziehungen",
+        "elementId": "08625959-807f-4607-b32f-b2628daf45ac",
+        "componentId": "Relationships",
+        "validations": {}
+    },
+    {
+        "label": "Interessante Produkte",
+        "parentId": "08625959-807f-4607-b32f-b2628daf45ac",
+        "elementId": "912c41de-cac6-4904-8c3a-3eb04341985d",
+        "componentId": "Relationship",
+        "validations": {}
+    },
+    {
+        "label": "Aktuelle Themen",
+        "parentId": "08625959-807f-4607-b32f-b2628daf45ac",
+        "elementId": "d4361992-5208-4178-a8b0-c4135fd4cf3e",
+        "componentId": "Relationship",
+        "validations": {}
+    }
+]

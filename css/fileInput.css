@@ -1,0 +1,56 @@
+.parent {
+  padding: 100px 0 0 0;
+  width: 200px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: 'Verdana';
+  src: url();
+}
+
+input[type="file"] {
+  display: none;
+}
+
+.custom-file-upload {
+  position: relative;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  display: block;
+  color: white;
+  background-color: #212121;
+  border: 2px solid white;
+  border-radius: 4px;
+  width: 120px;
+  height: 120px;
+  cursor: pointer;
+}
+
+.custom-file-upload .line {
+  background-color: white;
+  position: absolute;
+  border: 1px solid white;
+  border-radius: 100%;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.custom-file-upload .vertical-line {
+  width: 0px;
+  height: 20px;
+}
+
+.custom-file-upload .horizontal-line {
+  width: 20px;
+  height: 0px;
+}
+
+.thumbnail {
+  margin: 15px auto;
+  max-width: 120px;
+  max-height: 120px;
+}
+/*# sourceMappingURL=fileInput.css.map */

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<link rel="stylesheet" href="../css/set.css">
+	<link rel="stylesheet" href="../css/accordion.css">
+	<title>Drawer</title>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			// selecting the accordion
+			const container = document.querySelector(".accordion")
+			// selecting the accordion items inside the accordion
+			const detailElements = container.querySelectorAll(".accordion__item");
+			// creating a style-element (tag) where the styles are going to be written
+			let style = document.createElement("style");
+			// initializing an empty stylecontent variable to hold the style-text
+			let stylecontent = "";
+			// going through every accordion-item found before
+			detailElements.forEach(function (detailElement, index) {
+				// adding to stylecontent the style for opened accordion-items
+				stylecontent += `details[open]:nth-of-type(${index+1}){height:${detailElement.getBoundingClientRect().height}px;}`;
+				// removing the open-attribute of the accordion-items
+				detailElement.removeAttribute("open");
+				// adding to stylecontent the style for closed accordion-items
+				stylecontent += `details:nth-of-type(${index+1}){height:${detailElement.getBoundingClientRect().height}px;}`;
+				// adding an event-listener called 'toggle' with the detailsToggler-function to the accordion-items
+				detailElement.addEventListener('toggle', detailsToggler)
+			})
+			// adding the open-attribute to the first accordion-item
+			detailElements[0].setAttribute('open', true)
+			// writing the stylecontent-text to the style-element (tag)
+			style.innerText = stylecontent;
+			// appending the style-tag, with the additional styles for the accordion, to the head-element (tag)
+			document.head.appendChild(style);
+
+			// detailsToggler-function is responsible for toggling the opening and closing of the accordion-items
+			// when one accordion-item is opened, all others are closed
+			function detailsToggler(event) {
+				// if the item is already closed than nothing happens
+				if (!event.target.open) {
+					return;
+				}
+				// selecting the accordion
+				const container = event.target.closest('.accordion');
+				// looping through every accordion-item
+				for (const details of container.querySelectorAll('.accordion__item')) {
+					// if the cuurent item in the loop is not the targeted item to be open
+					if (details != event.target) {
+						// setting the open-attribute to false
+						details.open = false;
+					}
+				}
+			}
+		});
+	</script>
+</head>
+<body>
+	<div class="parent">
+		<div class="accordion">
+			<hr class="accordion__divider">
+			<details class="accordion__item" open>
+				<summary>
+					Beschreibung
+				</summary>
+				<p>
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et
+				</p>
+			</details>
+			<hr class="accordion__divider">
+			<details class="accordion__item" open>
+				<summary>
+					Anwendungstipps
+				</summary>
+				<p>
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut
+				</p>
+			</details>
+			<hr class="accordion__divider">
+			<details class="accordion__item" open>
+				<summary>
+					Inhaltsstoffe
+				</summary>
+				<p>
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+				</p>
+			</details>
+			<hr class="accordion__divider">
+			<details class="accordion__item" open>
+				<summary>
+					Hinweise
+				</summary>
+				<p>
+					Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et
+				</p>
+			</details>
+			<hr class="accordion__divider">
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,19 @@
+.parent {
+  padding: 100px 0 0 0;
+  width: 200px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: 'Verdana';
+  src: url();
+}
+
+select {
+  border: 2px solid white;
+  border-radius: 4px;
+  color: white;
+  width: 100px;
+  background-color: transparent;
+}
+/*# sourceMappingURL=select.css.map */

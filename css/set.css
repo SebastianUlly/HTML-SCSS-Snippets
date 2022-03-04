@@ -64,6 +64,11 @@ table {
   src: url();
 }
 
+body {
+  background-color: #212121;
+  font-size: 17px;
+}
+
 h1 {
   color: black;
   font-family: "Verdana";

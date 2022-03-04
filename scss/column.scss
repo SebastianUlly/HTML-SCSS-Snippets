@@ -1,0 +1,22 @@
+body {
+	padding: 100px 0 0 0;
+}
+
+// ########################################################################################
+// Beginn des Code-Snippets
+
+@import './variables';
+
+$number-of-columns: 3;
+
+.row {
+	display: flex;
+}
+
+.column {
+	width: 100% / $number-of-columns;
+}
+
+.group {
+	display: flex;
+}

@@ -1,0 +1,61 @@
+[
+    {
+        "id": "root",
+        "parentId": 0
+    },
+    {
+        "id": "row_1",
+        "parentId": "root"
+    },
+    {
+        "id": "row_2",
+        "parentId": "root"
+    },
+    {
+        "id": "row_3",
+        "parentId": "root"
+    },
+    {
+        "id": "column_1",
+        "parentId": "row_1"
+    },
+    {
+        "id": "column_2",
+        "parentId": "row_1"
+    },
+    {
+        "id": "group_1",
+        "parentId": "column_1"
+    },
+    {
+        "id": "group_2",
+        "parentId": "column_1"
+    },
+    {
+        "id": "group_3",
+        "parentId": "column_1"
+    },
+    {
+        "id": "group_4",
+        "parentId": "column_1"
+    },
+    {
+        "id": "element_1",
+        "parentId": "group_1",
+		"elementId": "s#fdölkgsäöghlfk",
+		"style": {
+			"height": 2,
+			"width": "25%"
+		}
+    },
+    {
+        "id": "element_2",
+        "parentId": "group_1",
+		"elementId": "r3409ri304r3asdas4"
+    },
+    {
+        "id": "element_3",
+        "parentId": "group_2",
+		"elementId": "asd.fa-#sdp-ASD"
+    }
+]

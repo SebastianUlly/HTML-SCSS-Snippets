@@ -1,0 +1,58 @@
+.parent {
+	margin: 100px auto;
+	padding: 30px;
+	width: 400px;
+	background-color: white;
+	border: $accent_color__1 solid 4px;
+	border-radius: 10px;
+}
+
+// ####################################################################################################
+// Begin des Code-Snippets
+
+@import './variables';
+
+.accordion {
+	// style for the accordion-items
+	&__item {
+		margin: 1.5*$standard_value;
+		position: relative;
+		transition: all .3s;
+		overflow: hidden;
+		background-color: white;
+		// removing the details-marker
+		summary::-webkit-details-marker,
+		summary::marker {
+			content: '';
+		}
+		// adding a custom marker at the end of the line
+		summary::after {
+			content:  "+"; 
+			position: absolute;
+			color: green;
+			font-size: 2.3*$standard_value;
+			font-weight: bold; 
+			right: 1*$standard_value;
+			transition: all 0.3s;
+		}
+		// indenting the text
+		p {
+			margin: 1.5*$standard_value 1.5*$standard_value 0 1.5*$standard_value;
+		}
+	}
+	// style for the opened accordion-items
+	&__item[open] {
+		transition: all .3s;
+		// custom marker when the accordion-item is opened
+		summary::after {
+			color: red;
+ 			transform: rotate(45deg);
+		}
+	}
+	// styles for the divider between the accordion-items
+	&__divider {
+		border: none;
+		height: 0.2*$standard_value;
+		background-color: $accent_color__1;
+	}
+}
