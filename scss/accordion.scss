@@ -3,7 +3,7 @@
 	padding: 30px;
 	width: 400px;
 	background-color: white;
-	border: $accent_color__1 solid 4px;
+	border: $accent-color__1 solid 4px;
 	border-radius: 10px;
 }
 
@@ -53,6 +53,6 @@
 	&__divider {
 		border: none;
 		height: 0.2*$standard_value;
-		background-color: $accent_color__1;
+		background-color: $accent-color__1;
 	}
 }

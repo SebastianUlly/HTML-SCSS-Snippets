@@ -8,88 +8,67 @@
 	<link rel="stylesheet" href="../css/set.css">
 	<link rel="stylesheet" href="../css/carousel.css">
 	<title>Karousel</title>
+
+	<script>
+		document.addEventListener('DOMContentLoaded', function () {
+			const carousel = document.querySelector('.carousel')
+			const slider = document.querySelector('.slider');
+			const controls = document.querySelector('.carousel__controls');
+			const prev = controls.querySelector('.arrow__prev');
+			const next = controls.querySelector('.arrow__next');
+
+			let direction = -1;
+			prev.addEventListener('click', function() {
+				if (direction === -1) {
+					slider.appendChild(slider.firstElementChild);
+					direction = 1;
+				}
+				carousel.style.justifyContent = 'flex-end';
+				slider.style.transform = 'translateX(20%)';
+			});
+
+			next.addEventListener('click', function() {
+				if (direction === 1) {
+					slider.prepend(slider.lastElementChild);
+					direction = -1
+				}
+				carousel.style.justifyContent = 'flex-start';
+				slider.style.transform = 'translateX(-20%)';
+			});
+
+			slider.addEventListener('transitionend', function () {
+				if (direction === -1) {
+					slider.appendChild(slider.firstElementChild);
+				} else if (direction === 1) {
+					slider.prepend(slider.lastElementChild)
+				}
+
+				slider.style.transition = 'none';
+				slider.style.transform = 'translateX(0)';
+				setTimeout(function () {
+					slider.style.transition = 'all 0.5s'
+				})
+			});
+		});
+	</script>
 </head>
 
 <body>
-	<div class="carousel" aria-label="Gallery">
-		<ol class="carousel__viewport">
-			<li 
-				id="carousel__slide1"
-				tabindex="0"
-				class="carousel__slide"
-			>
-				<div class="carousel__snapper">
-					<a 
-						href="#carousel__slide4"
-						class="carousel__prev">
-						Go to last slide
-					</a>
-					<a
-						href="#carousel__slide2"
-						class="carousel__next"
-					>
-						Go to next slide
-					</a>
-				</div>
-			</li>
-			<li
-				id="carousel__slide2"
-				tabindex="0"
-				class="carousel__slide"
-			>
-				<div class="carousel__snapper"></div>
-				<a
-					href="#carousel__slide1"
-					class="carousel__prev"
-				>
-					Go to previous slide
-				</a>
-				<a
-					href="#carousel__slide3"
-					class="carousel__next"
-				>
-					Go to next slide
-				</a>
-			</li>
-			<li
-				id="carousel__slide3"
-				tabindex="0"
-				class="carousel__slide"
-			>
-				<div class="carousel__snapper"></div>
-				<a
-					href="#carousel__slide2"
-					class="carousel__prev"
-				>
-					Go to previous slide
-				</a>
-				<a
-					href="#carousel__slide4"
-					class="carousel__next"
-				>
-					Go to next slide
-				</a>
-			</li>
-			<li
-				id="carousel__slide4"
-				tabindex="0"
-				class="carousel__slide"
-			>
-				<div class="carousel__snapper"></div>
-				<a
-					href="#carousel__slide3"
-					class="carousel__prev"
-				>
-					Go to previous slide
-				</a>
-				<a
-					href="#carousel__slide1"
-					class="carousel__next"
-				>
-					Go to first slide
-				</a>
-			</li>
-		</ol>
+	<div class="parent">
+		<div class="carousel">
+			<div class="slider">
+				<section style="background-color: wheat">Content for section 1</section>
+				<section style="background-color: aquamarine;">Content for section 2</section>
+				<section style="background-color: pink;">Content for section 3</section>
+				<section style="background-color: aqua;">Content for section 4</section>
+				<section style="background-color: yellow;">Content for section 5</section>
+				<section style="background-color: red;">Content for section 6</section>
+			</div>
+			<div class="carousel__controls">
+				<span class="arrow arrow__prev">prev</span>
+				<span class="arrow arrow__next">next</span>
+			</div>
+		</div>
 	</div>
 </body>
 </html>
