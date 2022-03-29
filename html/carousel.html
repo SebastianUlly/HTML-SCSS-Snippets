@@ -11,6 +11,7 @@
 
 	<script>
 		document.addEventListener('DOMContentLoaded', function () {
+			const percentage_to_slide = 100/6
 			const carousel = document.querySelector('.carousel')
 			const slider = document.querySelector('.slider');
 			const controls = document.querySelector('.carousel__controls');
@@ -19,12 +20,12 @@
 
 			let direction = -1;
 			prev.addEventListener('click', function() {
+				slider.style.transform = `translateX(${percentage_to_slide}%)`;
 				if (direction === -1) {
 					slider.appendChild(slider.firstElementChild);
 					direction = 1;
 				}
-				carousel.style.justifyContent = 'flex-end';
-				slider.style.transform = 'translateX(20%)';
+				// carousel.style.justifyContent = 'flex-end';
 			});
 
 			next.addEventListener('click', function() {
@@ -32,8 +33,8 @@
 					slider.prepend(slider.lastElementChild);
 					direction = -1
 				}
-				carousel.style.justifyContent = 'flex-start';
-				slider.style.transform = 'translateX(-20%)';
+				// carousel.style.justifyContent = 'flex-start';
+				slider.style.transform = `translateX(-${percentage_to_slide}%)`;
 			});
 
 			slider.addEventListener('transitionend', function () {
